@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+
+<head>
+  <meta charset="utf-8">
+  <title>Filtros</title>
+  <!-- INCLUIR ESTILOS BOOTSTRAP -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- INCLUIR ANGULAR -->
+  <script src="js/lib/angular.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>{{ "Filtros:Filters" }}</h1>
+    <h4>en Angularjs</h4>
+    <p>
+      Filtros de texto : {{ "JoSuE" }}
+      <br> Filtros de texto : {{ "JoSuE" | uppercase }}
+      <br> Filtros de texto : {{ "JoSuE" | lowercase}}
+    </p>
+
+    <p>
+      Filtro de moneda: {{ 15987 }}
+      <br> Filtro de moneda: {{ 15987 | currency }}
+      <br> Filtro de moneda: {{ 15987 | currency:'MNX ' }}
+    </p>
+    <p>
+      Filtro de número: {{ 13659656 }}
+      <br> Filtro de número: {{ 13659656 | number }}
+    </p>
+
+
+
+
+  </div>
+
+</body>
+
+</html>

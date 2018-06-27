@@ -1,2 +1,2 @@
-# Angular
-Practicas conglomeradas de angular js
+# AngularJS
+Prácticas conglomeradas de angular js
