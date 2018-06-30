@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+
+<head>
+  <meta charset="utf-8">
+  <title>Angular</title>
+  <!-- INCLUIR ESTILOS BOOTSTRAP -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- INCLUIR ANGULAR -->
+  <script src="js/lib/angular.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <h1>{{ "Evaluación" }}</h1>
+      <h4>en Angularjs</h4>
+
+      <form class="" action="index.html" method="post">
+        <label for="">Su Nombre Completo:</label>
+        <br>
+        <input type="text" ng-model="nombre" class="form-control" placeholder="Ingrese su nombre" name="" value="">
+        <br>
+        <label for="">Su Lugar de Trabajo:</label>
+        <br>
+        <input type="text" ng-model="trabajo" class="form-control" placeholder="Ingrese su nombre" name="" value="">
+        <br>
+        <label for="">Su Salario:</label>
+        <br>
+        <input type="text" ng-model="salario" class="form-control" placeholder="Ingrese su nombre" name="" value="">
+        <br>
+        <hr>
+        <p>
+          <b>Nombre: </b> {{ nombre | uppercase }}
+          <br> <b>Lugar de Trabajo:</b> {{ trabajo | uppercase }}
+          <br> <b>Salario:</b> {{ salario | currency:'MNX ' }}
+          <br>
+        </p>
+
+
+
+      </form>
+
+
+    </div>
+
+
+  </div>
+
+</body>
+
+</html>

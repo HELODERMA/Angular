@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>ng-model</title>
+  <title>Angular</title>
   <!-- INCLUIR ESTILOS BOOTSTRAP -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <!-- INCLUIR ANGULAR -->
@@ -12,16 +12,33 @@
 
 <body>
   <div class="container">
+    <h1>Empresario</h1>
+    <h4>Josue Sandoval TPD Enterprise</h4>
+    <hr>
+
     <div class="row">
-      <h1>ng-model</h1>
-      <h4>en Angularjs</h4>
 
-      <form class="" action="index.html" method="post">
-        <label for="">Su nombre: {{ nombre }}</label>
-        <br>
-        <input type="text" ng-model="nombre" class="form-control" placeholder="Ingrese su nombre" name="" value="">
+      <!-- DIV CON LA IMAGEN DEL EMPRESARIO -->
+      <div class="col-sm-3">
+        <section class="panel">
+          <div class="panel-body" align="center">
+            <img src="" class="img-circle" alt="" width="150px" height="150px">
+          </div>
+        </section>
+      </div>
 
-      </form>
+      <!-- DIV DONDE SE MUESTRA LA BIOGRAFIA DEL EMPRESARIO -->
+      <div class="col-sm-9">
+        <section class="panel">
+          <div class="panel-body">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            <br><br>
+            <strong>Edad:</strong>23 años
+          </div>
+        </section>
+      </div>
+
+
 
 
     </div>
