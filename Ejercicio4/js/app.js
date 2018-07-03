@@ -12,10 +12,11 @@
           cliente: "00425879",
           nombre: "Josue Sandoval",
           direccion: "Santa fe paseo de la reforma clavijero ibero 80 cuajimalpa",
-          pedidin:"SO5565656",
+          pedidon:"SO5565656",
           Preventa: "2034M18184",
           comentario: "",
           totalcj:"0",
+          un:"7",
           total:"268.56",
         producto:[
           {
@@ -31,7 +32,33 @@
             importe: "854"
           }
         ]
-      }
+      },
+      {
+        reparto: "41",
+        cliente: "00425879",
+        nombre: "Josue Sandoval",
+        direccion: "Santa fe paseo de la reforma clavijero ibero 80 cuajimalpa",
+        pedidon:"SO5565656",
+        Preventa: "2034M18184",
+        comentario: "",
+        totalcj:"0",
+        un:"7",
+        total:"268.56",
+      producto:[
+        {
+          prod: "000001038SK",
+          um: "UN",
+          cantidad: "12",
+          importe: "152"
+        },
+        {
+          prod: "gyuguy55",
+          um: "UN",
+          cantidad: "5",
+          importe: "854"
+        }
+      ]
+    }
     ]
     }
 
