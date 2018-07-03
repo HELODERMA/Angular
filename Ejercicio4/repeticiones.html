@@ -24,8 +24,29 @@
         {{ nombre }}
       </li>
     </ul>
+    <br>
 
-    {{ listado | json }}
+    <h2>TABLA</h2>
+    <table class="table table-striped">
+      <tr>
+        <th>Nombre</th>
+        <th>Clase</th>
+        <th>Edad</th>
+      </tr>
+      <tr ng-repeat="prof in listadoProfesores.profesores ">
+        <td>{{ prof.nombre }}</td>
+        <td>{{ prof.clase }}</td>
+        <td>{{ prof.edad }}</td>
+      </tr>
+    </table>
+
+    <h2>TABLA DE MULTIPLICAR</h2>
+    <ul>
+      <li ng-repeat="dos in [1,2,3,4,5,6,7,8,9,10]">
+        2 X {{ dos }} = {{ 2 * dos }}</li>
+    </ul>
+
+    <h5>Filtro JSON</h5> {{ listado | json }}
 
 
 

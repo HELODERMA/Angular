@@ -34,9 +34,9 @@
         ]
       },
       {
-        reparto: "41",
+        reparto: "42",
         cliente: "00425879",
-        nombre: "Josue Sandoval",
+        nombre: "Samanta Morse",
         direccion: "Santa fe paseo de la reforma clavijero ibero 80 cuajimalpa",
         pedidon:"SO5565656",
         Preventa: "2034M18184",
@@ -83,5 +83,4 @@
     }
 
   }]);
-
 })();

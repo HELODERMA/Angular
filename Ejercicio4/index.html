@@ -3,11 +3,13 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Angular</title>
+  <title>Mediaagility</title>
   <!-- INCLUIR ESTILOS BOOTSTRAP -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <!-- ESTILOS DEL ANIMATE -->
   <link rel="stylesheet" href="css/animate.css">
+  <!-- MIS PROPIOES ESTILOS -->
+  <link rel="stylesheet" href="css/main.css">
   <!-- INCLUIR ANGULAR -->
   <script src="js/lib/angular.min.js"></script>
   <!-- MODULO PRINCIPAL DE ANGULAR -->
@@ -16,36 +18,52 @@
 
 <body>
   <div class="container" ng-controller="listadoCtrl">
-    <h1>ng-repeat</h1>
-    <h4>{{ "Manejando Repeticiones" }}</h4>
-    <hr>
-<!--
-    <div class="" ng-repeat="job in informeReparto.trabajo">
-      {{ job.producto.prod }}
-    </div> -->
+    <h1>Libro de Ruta</h1>
+    <h4>{{ "MediaAgility" }}</h4>
 
+    <!-- FILTROS -->
+    <div class="row">
+      <label for="">Busqueda</label>
+      <br>
+      <input type="text" class="form-control" ng-model="busqueda" placeholder="Ingrese lo que desea buscar">
+      <br>
+    </div>
 
-
-
-    <!-- <table class="table table-striped">
+    <table class="table table-striped" ng-repeat="uno in informeReparto.informe | filter:busqueda">
+      <td nowrap class="titulo" colspan="4">
+        <h4>Reparto</h4></td>
       <tr>
-        <th>Producto</th>
-        <th>UM</th>
-        <th>Cantidad</th>
-        <th>Importe</th>
+        <th>Reparto</th>
+        <th>Cliente</th>
+        <th colspan="2">Nombre</th>
       </tr>
-      <tr ng-repeat="pro in informeReparto.informe.producto">
-        <td>{{ pro.prod }}</td>
-        <td>{{ pro.um }}</td>
-        <td>{{ pro.cantidad }}</td>
-        <td>{{ pro.importe }}</td>
+      <tr>
+        <td class="success">{{ uno.reparto }}</td>
+        <td class="success">{{ uno.cliente }}</td>
+        <td class="success" colspan="2">{{ uno.nombre }}</td>
       </tr>
-    </table> -->
 
+      <tr>
+        <th colspan="4">Direccion</th>
+      </tr>
+      <tr>
+        <td class="success" colspan="4">{{ uno.direccion }}</td>
+      </tr>
 
+      <tr>
+        <th>Pedido No</th>
+        <th>Preventa</th>
+        <th colspan="2">Comentario</th>
+      </tr>
+      <tr>
+        <td class="success">{{ uno.pedidon }}</td>
+        <td class="success">{{ uno.Preventa }}</td>
+        <td class="success" colspan="2">{{ uno.comentario }}</td>
+      </tr>
 
+      <td nowrap class="titulo" colspan="4">
+        <h4>Producto</h4></td>
 
-    <!-- <table class="table table-striped" ng-repeat="uno in informeReparto.informe">
       <tr>
         <th>Producto</th>
         <th>UM</th>
@@ -53,96 +71,30 @@
         <th>Importe</th>
       </tr>
       <tr ng-repeat="dos in uno.producto">
-        <td >{{dos.prod}}</td>
+        <td>{{dos.prod}}</td>
         <td>{{dos.um}}</td>
         <td>{{dos.cantidad}}</td>
         <td>{{dos.importe}}</td>
       </tr>
-    </table> -->
 
+      <td nowrap class="titulo" colspan="4">
+        <h4>TOTAL</h4></td>
 
+      <tr>
+        <th>CJ</th>
+        <th>UN</th>
+        <th colspan="2">Total</th>
+      </tr>
+      <tr>
+        <td class="success">{{ uno.totalcj }}</td>
+        <td class="success">{{ uno.un }}</td>
+        <td class="success" colspan="2">{{ uno.total | currency}}</td>
+      </tr>
 
-        <table class="table table-striped"  ng-repeat="uno in informeReparto.informe" >
-          <tr>
-            <th>Reparto</th>
-            <th>Cliente</th>
-            <th>Nombre</th>
-          </tr>
-          <tr>
-            <td class="success">{{ uno.reparto }}</td>
-            <td class="success">{{ uno.cliente }}</td>
-            <td class="success">{{ uno.nombre }}</td>
-          </tr>
+      <td nowrap class="new" colspan="4">
+        <h4></h4></td>
 
-          <tr>
-            <th colspan="3">Direccion</th>
-          </tr>
-          <tr>
-            <td class="success" colspan="3">{{ uno.direccion }}</td>
-          </tr>
-
-          <tr>
-            <th>Pedido No</th>
-            <th>Preventa</th>
-            <th>Comentario</th>
-          </tr>
-          <tr>
-            <td class="success">{{ uno.pedidon }}</td>
-            <td class="success">{{ uno.Preventa }}</td>
-            <td class="success">{{ uno.comentario }}</td>
-          </tr>
-
-<!--
-          <table class="table table-striped" ng-repeat="uno in informeReparto.informe"> -->
-            <tr>
-              <th>Producto</th>
-              <th>UM</th>
-              <th>Cantidad</th>
-              <th>Importe</th>
-            </tr>
-            <tr ng-repeat="dos in uno.producto">
-              <td >{{dos.prod}}</td>
-              <td>{{dos.um}}</td>
-              <td>{{dos.cantidad}}</td>
-              <td>{{dos.importe}}</td>
-            </tr>
-
-            <td nowrap><h4>TOTAL</h4></td>
-
-            <tr>
-              <th>CJ</th>
-              <th>UN</th>
-              <th>Total</th>
-            </tr>
-            <tr>
-              <td class="success">{{ uno.totalcj }}</td>
-              <td class="success">{{ uno.un }}</td>
-              <td class="success">{{ uno.total | currency}}</td>
-            </tr>
-            <tr class="info">
-              <th class="active" colspan="3" ></th>
-            </tr>
-
-            </table>
-
-              <!-- <table class="table table-striped" ng-repeat="uno in informeReparto.informe">
-
-            <h3>Total</h3>
-
-
-
-        </table> -->
-
-
-
-
-
-    <hr>
-
-
-    <!-- {{ informeReparto | json }} -->
-
-
+    </table>
 
 
 
