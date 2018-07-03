@@ -1,19 +1,23 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="tpdApp">
 
 <head>
   <meta charset="utf-8">
   <title>Angular</title>
   <!-- INCLUIR ESTILOS BOOTSTRAP -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- ESTILOS DEL ANIMATE -->
+  <link rel="stylesheet" href="css/animate.css">
   <!-- INCLUIR ANGULAR -->
   <script src="js/lib/angular.min.js"></script>
+  <!-- MODULO PRINCIPAL DE ANGULAR -->
+  <script src="js/app.js"></script>
 </head>
 
 <body>
-  <div class="container">
+  <div class="container" ng-controller="empresarioCtrl">
     <h1>Empresario</h1>
-    <h4>Josue Sandoval TPD Enterprise</h4>
+    <h4>{{ empre.nombre }}</h4>
     <hr>
 
     <div class="row">
@@ -22,7 +26,7 @@
       <div class="col-sm-3">
         <section class="panel">
           <div class="panel-body" align="center">
-            <img src="" class="img-circle" alt="" width="150px" height="150px">
+            <img ng-src="{{ empre.foto }}" class="img-circle" alt="" width="150px" height="150px">
           </div>
         </section>
       </div>
@@ -31,16 +35,33 @@
       <div class="col-sm-9">
         <section class="panel">
           <div class="panel-body">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            {{ empre.bio }}
             <br><br>
-            <strong>Edad:</strong>23 años
+            <strong>Edad:</strong>{{ empre.edad }} años
+            <br><br>
+            <button type="button" name="button" class="btn btn-primary" ng-click="editarEmpresario()">Editar</button>
           </div>
         </section>
       </div>
-
-
-
-
+    </div>
+    <div class="row fast fadeIn" ng-show="mostrarCaja">
+      <div class="col-sm-6">
+        <section class="panel">
+          <div class="panel-body">
+            <label>Nombre:</label>
+            <input type="text" class="form-control" ng-model="editando.nombre">
+            <br>
+            <label>Edad:</label>
+            <input type="text" class="form-control" ng-model="editando.edad">
+            <br>
+            <label>Biografia:</label>
+            <textarea name="name" rows="5" class="form-control" ng-model="editando.bio"></textarea>
+            <br>
+            <button class="btn btn-success" ng-click="guardar()">Guardar</button>
+            <button class="btn btn-danger" ng-click="cancelar()">Cancelar</button>
+          </div>
+        </section>
+      </div>
     </div>
 
 

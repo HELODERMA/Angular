@@ -1,30 +1,77 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="myApp">
 
 <head>
   <meta charset="utf-8">
-  <title>ng-model</title>
+  <title>Angular</title>
   <!-- INCLUIR ESTILOS BOOTSTRAP -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- ESTILOS DEL ANIMATE -->
+  <link rel="stylesheet" href="css/animate.css">
   <!-- INCLUIR ANGULAR -->
   <script src="js/lib/angular.min.js"></script>
+  <!-- MODULO PRINCIPAL DE ANGULAR -->
+  <script src="js/app.js"></script>
 </head>
 
 <body>
-  <div class="container">
-    <div class="row">
-      <h1>ng-model</h1>
-      <h4>en Angularjs</h4>
-
-      <form class="" action="index.html" method="post">
-        <label for="">Su nombre: {{ nombre }}</label>
-        <br>
-        <input type="text" ng-model="nombre" class="form-control" placeholder="Ingrese su nombre" name="" value="">
-
-      </form>
+  <div class="container" ng-controller="listadoCtrl">
+    <h1>ng-repeat</h1>
+    <h4>{{ "Manejando Repeticiones" }}</h4>
+    <hr>
+<!--
+    <div class="" ng-repeat="job in informeReparto.trabajo">
+      {{ job.producto.prod }}
+    </div> -->
 
 
-    </div>
+
+
+    <!-- <table class="table table-striped">
+      <tr>
+        <th>Producto</th>
+        <th>UM</th>
+        <th>Cantidad</th>
+        <th>Importe</th>
+      </tr>
+      <tr ng-repeat="pro in informeReparto.informe.producto">
+        <td>{{ pro.prod }}</td>
+        <td>{{ pro.um }}</td>
+        <td>{{ pro.cantidad }}</td>
+        <td>{{ pro.importe }}</td>
+      </tr>
+    </table> -->
+
+    <h1>{{ informeReparto.informe.reparto }}</h1>
+
+
+    <table class="table table-striped" ng-repeat="uno in informeReparto.informe">
+      <tr>
+        <th>Producto</th>
+        <th>UM</th>
+        <th>Cantidad</th>
+        <th>Importe</th>
+      </tr>
+      <tr ng-repeat="dos in uno.producto">
+        <td >{{dos.prod}}</td>
+        <td>{{dos.um}}</td>
+        <td>{{dos.cantidad}}</td>
+        <td>{{dos.importe}}</td>
+      </tr>
+
+
+    </table>
+
+
+    <hr>
+
+
+    {{ informeReparto | json }}
+
+
+
+
+
 
 
   </div>
