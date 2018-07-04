@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+  <head>
+    <meta charset="utf-8">
+    <title>ANGULAR</title>
+    <!-- INCLUIR ESTILOS BOOTSTRAP -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- ESTILOS DEL ANIMATE -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- INCLUIR ANGULAR -->
+    <script src="js/lib/angular.min.js"></script>
+    <!-- MODULO PRINCIPAL DE ANGULAR -->
+    <script src="js/app.js"></script>
+  </head>
+
+  <body>
+    <div class="container" ng-controller="listadoCtrl">
+      <h1>ng-options</h1>
+      <h4>{{ "Manejando Repeticiones" }}</h4>
+      <hr>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <h3>Con ng-repeat</h3>
+          <label>Selecione el pais
+            {{ paisSeleccionado }}</label>
+          <select class="form-control" ng-model="paisSeleccionado">
+            <option value="">Seleccione</option>
+            <option ng-repeat="pais in paises" value="{{ pais.id }}">{{ pais.nombre }}</option>
+          </select>
+        </div>
+        <div class="col-sm-6">
+          <h3>con ng-options</h3>
+          <label>Seleccione el pais</label>
+          <select ng-model="paisSeleccionado" class="form-control" ng-options="pais.id as pais.nombre for pais in paises">
+            <option value="">Selecione</option>
+          </select>
+        </div>
+      </div>
+
+    </div>
+
+  </body>
+
+</html>

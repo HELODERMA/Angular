@@ -34,7 +34,7 @@
         ]
       },
       {
-        reparto: "42",
+        reparto: "40",
         cliente: "00425879",
         nombre: "Samanta Morse",
         direccion: "Santa fe paseo de la reforma clavijero ibero 80 cuajimalpa",
@@ -46,16 +46,16 @@
         total:"268.56",
       producto:[
         {
-          prod: "000001038SK",
+          prod: "12783",
           um: "UN",
-          cantidad: "12",
-          importe: "152"
+          cantidad: "4",
+          importe: "432"
         },
         {
-          prod: "gyuguy55",
+          prod: "hduih93",
           um: "UN",
-          cantidad: "5",
-          importe: "854"
+          cantidad: "25",
+          importe: "8354"
         }
       ]
     }
