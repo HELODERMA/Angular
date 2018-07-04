@@ -9,7 +9,7 @@
       informe: [
         {
           reparto: "41",
-          cliente: "00425879",
+          cliente: "009",
           nombre: "Josue Sandoval",
           direccion: "Santa fe paseo de la reforma clavijero ibero 80 cuajimalpa",
           pedidon:"SO5565656",
@@ -38,7 +38,7 @@
         cliente: "00425879",
         nombre: "Samanta Morse",
         direccion: "Santa fe paseo de la reforma clavijero ibero 80 cuajimalpa",
-        pedidon:"SO5565656",
+        pedidon:"19952703",
         Preventa: "2034M18184",
         comentario: "",
         totalcj:"0",
