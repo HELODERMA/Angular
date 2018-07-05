@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+  <head>
+    <meta charset="utf-8">
+    <title>ANGULAR</title>
+    <!-- INCLUIR ESTILOS BOOTSTRAP -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- ESTILOS DEL ANIMATE -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- INCLUIR ANGULAR -->
+    <script src="js/lib/angular.min.js"></script>
+    <!-- MODULO PRINCIPAL DE ANGULAR -->
+    <script src="js/app.js"></script>
+  </head>
+
+  <body>
+    <div class="container" ng-controller="mainCtrl">
+      <h1>HTTP REQUEST</h1>
+      <h4>{{ "DATA DINAMICA" }}</h4>
+      <hr>
+
+      <div class="row">
+        {{ profesores | json }}
+      </div>
+
+    </div>
+
+  </body>
+
+</html>
