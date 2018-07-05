@@ -26,35 +26,35 @@
 
         <tr>
           <td colspan="4">No. Viaje
-            {{ check.noviaje }}</td>
+            : {{ check.noviaje }}</td>
           <td colspan="4">Fecha
-            {{ check.fecha }}</td>
+            : {{ check.fecha }}</td>
         </tr>
 
         <tr>
           <td colspan="4">Auditor
-            {{ check.auditor }}</td>
+            : {{ check.auditor }}</td>
           <td colspan="4">Inicio Check-in
-            {{ check.montodev }}</td>
+            : {{ check.montodev }}</td>
         </tr>
 
         <tr>
           <td colspan="4">Monto devoluciones
-            {{ check.montoped }}</td>
+            : {{ check.montoped }}</td>
           <td colspan="4">Fin Check-in
-            {{ check.iniciochec }}</td>
+            : {{ check.iniciochec }}</td>
         </tr>
 
         <tr>
           <td colspan="4">Monto pedidos
-            {{ check.fincheck }}</td>
+            : {{ check.fincheck }}</td>
           <td colspan="4">Monto faltante
-            {{ check.montofalta }}</td>
+            : {{ check.montofalta | currency}}</td>
         </tr>
         <tr>
           <td colspan="4"></td>
           <td colspan="4">Total a depositar
-            {{ check.totaldep }}</td>
+            : {{ check.totaldep | currency}}</td>
         </tr>
 
         <tr>
@@ -72,15 +72,15 @@
           <th>Sobrante</th>
           <th>Devuelto</th>
         </tr>
-        <tr>
-          <td>{{ check.id }}</td>
-          <td>{{ check.producto }}</td>
-          <td>{{ check.carga }}</td>
-          <td>{{ check.entregado }}</td>
-          <td>{{ check.checkin }}</td>
-          <td>{{ check.falante }}</td>
-          <td>{{ check.sobrante }}</td>
-          <td>{{ check.devuelto }}</td>
+        <tr ng-repeat="plus in check.prod">
+          <td>{{ plus.id }}</td>
+          <td>{{ plus.producto }}</td>
+          <td>{{ plus.carga }}</td>
+          <td>{{ plus.entregado }}</td>
+          <td>{{ plus.checkin }}</td>
+          <td>{{ plus.falante }}</td>
+          <td>{{ plus.sobrante }}</td>
+          <td>{{ plus.devuelto }}</td>
         </tr>
 
       </table>
