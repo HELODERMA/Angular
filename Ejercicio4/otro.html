@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+  <meta charset="utf-8">
+  <title>Mediaagility</title>
+  <!-- INCLUIR ESTILOS BOOTSTRAP -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- ESTILOS DEL ANIMATE -->
+  <link rel="stylesheet" href="css/animate.css">
+  <!-- MIS PROPIOES ESTILOS -->
+  <link rel="stylesheet" href="css/main.css">
+  <!-- INCLUIR ANGULAR -->
+  <script src="js/lib/angular.min.js"></script>
+  <!-- MODULO PRINCIPAL DE ANGULAR -->
+  <script src="js/app.js"></script>
+</head>
+
+<body>
+  <div class="container" ng-controller="listadoCtrl">
+    <h1>Libro de Ruta</h1>
+    <h4>{{ "MediaAgility" }}</h4>
+
+    <!-- FILTROS -->
+    <!-- <div class="row">
+      <label for="">Busqueda</label>
+      <br>
+      <input type="text" class="form-control" ng-model="busqueda" placeholder="Ingrese lo que desea buscar">
+      <br>
+    </div> -->
+
+    <table class="table table-striped" ng-repeat="tres in repartoZona.productos">
+      <td nowrap class="titulo" colspan="5">
+        <h4>INFORME DE REPARTO POR ZONA</h4>
+      <tr>
+        <th>Totales por tipo de documento</th>
+        <th colspan="4"></th>
+      </tr>
+      <tr>
+        <th>Tipo</th>
+        <th>#doctos</th>
+        <th>Importe</th>
+        <th colspan="2"></th>
+      </tr>
+      <tr>
+        <th>Pedido</th>
+        <th>{{ tres.numerodoc }}</th>
+        <th>{{ tres.importe }}</th>
+        <th colspan="2"></th>
+      </tr>
+      <tr>
+        <th>Devols</th>
+        <th>{{ tres.devolvs }}</th>
+        <th>{{ tres.devImport }}</th>
+        <th colspan="2"></th>
+      </tr>
+      <td></td>
+      <tr>
+        <th>Totales por tipo de preventa</th>
+        <th colspan="4"></th>
+      </tr>
+      <tr>
+        <th>Preventa</th>
+        <th>#doctos</th>
+        <th>#clientes</th>
+        <th>Importe</th>
+        <th colspan="1"></th>
+      </tr>
+      <tr>
+        <th>{{}}</th>
+        <th>{{}}</th>
+        <th>{{}}</th>
+        <th>{{}}</th>
+        <th colspan="1"></th>
+      </tr>
+      <tr>
+        <th>{{}}</th>
+        <th>{{}}</th>
+        <th>{{}}</th>
+        <th>{{}}</th>
+        <th colspan="1"></th>
+      </tr>
+      <tr>
+        <th></th>
+        <th>{{1}}</th>
+        <th>{{1}}</th>
+        <th>{{ }}</th>
+        <th colspan="1"></th>
+      </tr>
+      <tr>
+        <th>TOTAL</th>
+        <th>{{  }}</th>
+        <th>{{}}</th>
+        <th>{{ }}</th>
+      </tr>
+      <td colspan="5"></td>
+      <tr>
+        <th>Totales del viaje: {{ tatalViaje }}</th>
+        <th colspan="4"></th>
+      </tr>
+      <tr>
+        <th colspan="2">Producto</th>
+        <th>Checkout</th>
+        <th>Asig. Pedidos</th>
+        <th>Extra</th>
+      </tr>
+      <tr ng-repeat="trex in tres.product">
+        <td colspan="2">{{ trex.id }}</td>
+        <td>{{ trex.checkout }}</td>
+        <td>{{ trex.asigPedidos }}</td>
+        <td>{{ trex.extra }}</td>
+      </tr>
+
+
+    </table>
+
+
+
+
+
+  </div>
+
+</body>
+
+</html>

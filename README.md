@@ -7,3 +7,5 @@ Ejercicio 3: Direactivas "#App y #Controller", Carga Dinamica de Datos por JSON,
 Ejercicio 4: CAMBIAMOS LA ESTRUCTURA DEL APP.JS, COMO DEBIESE SER EL ARCHIVO APP.JS,mejores practicas, carga dinamica json y filtros al ng-repeat.
 Ejercicio 5: ng-options con paises
 Ejercicio 6: http request, INYECCIONES
+Ejercicio 7: ng-include Permite importar archivos html externos
+Ejercicio 8: API Obtener ciudad lat long

@@ -16,10 +16,21 @@
     $scope.profesores = {};
 
 
-    // METODO DE LA FORMA MAS SIMILAR AL DEL PROFESOR
-    $http.get('json/profesores.json').then(function(response){
-      // ESTE CODIGO SE EJECUTA CUNADO LA PETICION ES CORRECTA
-      $scope.profesores = response.data;
+    // *****METODO DE LA FORMA MAS SIMILAR AL DEL PROFESOR********
+    // $http.get('json/profesores.json').then(function(response){
+    //   // ESTE CODIGO SE EJECUTA CUNADO LA PETICION ES CORRECTA
+    //   $scope.profesores = response.data;
+    // });
+
+    // ******** Metodo mas complejo
+
+    $http({
+        method : "GET",
+        url : "json/profesores.json"
+    }).then(function mySuccess(response) {
+         $scope.profesores = response.data;
+    }, function myError(response) {
+         $scope.profesores = response.statusText;
     });
 
   }]);
