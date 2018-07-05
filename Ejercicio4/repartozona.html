@@ -18,8 +18,7 @@
 
 <body>
   <div class="container" ng-controller="listadoCtrl">
-    <h1>Libro de Ruta</h1>
-    <h4>{{ "MediaAgility" }}</h4>
+    <br>
 
     <!-- FILTROS -->
     <!-- <div class="row">
@@ -67,16 +66,16 @@
         <th colspan="1"></th>
       </tr>
       <tr>
+        <th>{{tres.preventa1}}</th>
         <th>{{}}</th>
-        <th>{{}}</th>
-        <th>{{}}</th>
+        <th>{{tres.cliente1}}</th>
         <th>{{}}</th>
         <th colspan="1"></th>
       </tr>
       <tr>
+        <th>{{tres.preventa2}}</th>
         <th>{{}}</th>
-        <th>{{}}</th>
-        <th>{{}}</th>
+        <th>{{tres.cliente2}}</th>
         <th>{{}}</th>
         <th colspan="1"></th>
       </tr>
@@ -91,7 +90,7 @@
         <th>TOTAL</th>
         <th>{{  }}</th>
         <th>{{}}</th>
-        <th>{{ }}</th>
+        <th>{{tres.importe | currency }}</th>
       </tr>
       <td colspan="5"></td>
       <tr>
