@@ -1,22 +1,21 @@
-       // PRIMER ESTRUCTURA
-var app = angular.module('myApp', []);
+//        PRIMER ESTRUCTURA
+// var app = angular.module('myApp', []);
+//
+// app.controller('testCtrl', function($scope) {
+//
+// });
 
-app.controller('mainCtrl', function['$scope','$http', function($scope,$http) {
+(function() {
+  var app = angular.module('myApp', []);
 
-  $scope.geo = {};
-
-  // var url = "http://www.geoplugin.net/json.gp" + "?callback=JSON_CALLBACK";
-
-  $http.jsonp('http://www.geoplugin.net/json.gp?callback=JSON_CALLBACK')
-    .success(function(data){
-       console.log('success');
-    })
-    .error(function () {
-      console.log('error')
+  app.controller('mainCtrl', ['$scope','$http', function($scope,$http) {
+    $scope.geo = {};
+    var query = 'http://www.geoplugin.net/json.gp?callback=JSON_CALLBACK';
+    $http.jsonp('http://www.geoplugin.net/json.gp?callback=JSON_CALLBACK', {jsonpCallbackParam: 'callback'}).then(function(data){
+      $scope.geo = data;
     });
 
 
 
-
-
-});
+  }]);
+})();
