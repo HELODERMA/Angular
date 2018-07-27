@@ -8,4 +8,5 @@ Ejercicio 4: CAMBIAMOS LA ESTRUCTURA DEL APP.JS, COMO DEBIESE SER EL ARCHIVO APP
 Ejercicio 5: ng-options con paises
 Ejercicio 6: http request, INYECCIONES
 Ejercicio 7: ng-include Permite importar archivos html externos
-Ejercicio 8: API Obtener ciudad lat long
+Ejercicio 8: API Obtener ciudad lat long (Aplicacion de Ciudad ip y moneda)
+Ejercicio 9: Aplicacion del clima

@@ -1,36 +1,28 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="myApp">
-
-  <head>
-    <meta charset="utf-8">
-    <title>ANGULAR</title>
-    <!-- INCLUIR ESTILOS BOOTSTRAP -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- ESTILOS DEL ANIMATE -->
-    <link rel="stylesheet" href="css/animate.css">
-    <!-- INCLUIR ANGULAR -->
-    <script src="js/lib/angular.min.js"></script>
-    <!-- MODULO PRINCIPAL DE ANGULAR -->
-    <script src="js/app.js"></script>
-  </head>
-
-  <body>
-    <div class="container" ng-controller="mainCtrl">
-      <h1>ng-include</h1>
-      <h4>{{ "Data dinamica" }}</h4>
-      <hr>
-
-      <div class="row">
-        <div class="col-sm-6">
-
-          <div class="" ng-include="tblProfesores"></div>
-
-          <!-- {{profesores | json}} -->
-        </div>
-      </div>
-
-    </div>
-
-  </body>
-
+	<head>
+		<meta charset="utf-8">
+		<title>ANGULAR</title>
+		<!-- INCLUIR ESTILOS BOOTSTRAP -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<!-- ESTILOS DEL ANIMATE -->
+		<link rel="stylesheet" href="css/animate.css">
+		<!-- INCLUIR ANGULAR -->
+		<script src="js/lib/angular.min.js"></script>
+		<!-- MODULO PRINCIPAL DE ANGULAR -->
+		<script src="js/app.js"></script>
+	</head>
+	<body>
+		<div class="container" ng-controller="mainCtrl">
+			<h1>ng-include</h1>
+			<h4>{{ "Data dinamica" }}</h4>
+			<hr>
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="" ng-include="tblProfesores"></div>
+					{{profesores | json}}
+				</div>
+			</div>
+		</div>
+	</body>
 </html>

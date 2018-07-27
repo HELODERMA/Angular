@@ -1,30 +1,40 @@
-//        PRIMER ESTRUCTURA
-// var app = angular.module('myApp', []);
-//
-// app.controller('testCtrl', function($scope) {
-//
-// });
+// MI FUNCION MAESRA
 
 (function() {
   var app = angular.module('myApp', []);
 
-  app.controller('mainCtrl', ['$scope','$http', function($scope,$http) {
+	app.controller('mainCtrl', ['$scope','$http','$sce', function($scope,$http,$sce){
 
-    $scope.url = "http://www.geoplugin.net/json.gp";
-    $scope.geo = {};
-
-    // ESTE JSONP NO FUNCIONO
-    // $http.jsonp('http://www.geoplugin.net/json.gp?callback=JSON_CALLBACK', {jsonpCallbackParam: 'callback'}).then(function(data){
-    //   $scope.geo = data;
-    // });
-
-    $http.get($scope.url).then(function(response){
-      console.log(response);
-      $scope.geo = response.data;
-
-    })
-
-
+	  var url = "http://www.geoplugin.net/json.gp";
+	  $http.jsonp( $sce.trustAsResourceUrl(url) )
+	        .then(function(data){
+	          console.log(data);
+	        })
+	        .catch( function(error){
+	          console.warn( error );
+	        })
 
   }]);
+
 })();
+
+// FUNCION DE SHAI
+
+// var app = angular.module('myApp', []);
+//
+// app.controller('mainCtrl', ['$scope','$http','$sce', function($scope,$http,$sce) {
+//   $scope.name = 'World';
+//   $scope.url = "http://www.geoplugin.net/json.gp";
+//
+//   $scope.trustSrc = function(src) {
+//     return $sce.trustAsResourceUrl(src);
+//   }
+//
+//   $scope.trustedUrl = $scope.trustSrc($scope.url);
+//
+//   $http.get($scope.url).then(function(response){
+//         console.log(response);
+//         $scope.geo = response.data;
+//
+//       })
+// }]);
