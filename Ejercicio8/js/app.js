@@ -1,6 +1,7 @@
 // MI FUNCION MAESRA
 
 (function() {
+	
   var app = angular.module('myApp', []);
 
 	app.controller('mainCtrl', ['$scope','$http','$sce', function($scope,$http,$sce){
@@ -15,7 +16,6 @@
 	        })
 
   }]);
-
 })();
 
 // FUNCION DE SHAI

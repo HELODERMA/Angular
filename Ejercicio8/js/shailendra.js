@@ -1,6 +1,6 @@
-var app = angular.module('plunker', ['ngSanitize']);
+var app = angular.module('myApp', ['ngSanitize']);
 
-app.controller('MainCtrl', function($scope,$sce) {
+app.controller('mainCtrl', function($scope,$sce) {
   $scope.name = 'World';
   $scope.url = "http://www.geoplugin.net/json.gp";
 
