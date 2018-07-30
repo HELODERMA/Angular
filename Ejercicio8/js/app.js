@@ -1,40 +1,29 @@
-// MI FUNCION MAESRA
+(function(){
 
-(function() {
-	
-  var app = angular.module('myApp', []);
+var app = angular.module('myApp',[ ]);
 
-	app.controller('mainCtrl', ['$scope','$http','$sce', function($scope,$http,$sce){
 
+//Si comento el bloque app.config, me sale error $sce:insecurl por la petición de geoplugin
+app.config(function($sceDelegateProvider) {
+    $sceDelegateProvider.resourceUrlWhitelist([
+        'http://www.geoplugin.net/json.gp?callback'
+    ]);
+});
+
+
+
+app.controller('mainCtrl', ['$scope','$http','$sce', function($scope,$http,$sce){
+
+    $scope.geo = {};
 	  var url = "http://www.geoplugin.net/json.gp";
-	  $http.jsonp( $sce.trustAsResourceUrl(url) )
+	  $http.jsonp('http://www.geoplugin.net/json.gp?callback', {jsonpCallbackParam: 'jsoncallback'})
 	        .then(function(data){
-	          console.log(data);
+					 $scope.geo = data.data;
+	         console.log(data.data);
 	        })
 	        .catch( function(error){
 	          console.warn( error );
 	        })
 
-  }]);
+}]);
 })();
-
-// FUNCION DE SHAI
-
-// var app = angular.module('myApp', []);
-//
-// app.controller('mainCtrl', ['$scope','$http','$sce', function($scope,$http,$sce) {
-//   $scope.name = 'World';
-//   $scope.url = "http://www.geoplugin.net/json.gp";
-//
-//   $scope.trustSrc = function(src) {
-//     return $sce.trustAsResourceUrl(src);
-//   }
-//
-//   $scope.trustedUrl = $scope.trustSrc($scope.url);
-//
-//   $http.get($scope.url).then(function(response){
-//         console.log(response);
-//         $scope.geo = response.data;
-//
-//       })
-// }]);
