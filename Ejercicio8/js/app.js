@@ -15,7 +15,6 @@ app.config(function($sceDelegateProvider) {
 app.controller('mainCtrl', ['$scope','$http','$sce', function($scope,$http,$sce){
 
     $scope.geo = {};
-	  var url = "http://www.geoplugin.net/json.gp";
 	  $http.jsonp('http://www.geoplugin.net/json.gp?callback', {jsonpCallbackParam: 'jsoncallback'})
 	        .then(function(data){
 					 $scope.geo = data.data;
