@@ -10,3 +10,4 @@ Ejercicio 6: http request, INYECCIONES
 Ejercicio 7: ng-include Permite importar archivos html externos
 Ejercicio 8: API Obtener ciudad lat long (Aplicacion de Ciudad ip y moneda)
 Ejercicio 9: Aplicacion del clima, JSON MAS COMPLEJO
+Ejercicio 10: Ejercicio complejo, NG-ROUTE,  Creando nuestro propio filtro

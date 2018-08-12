@@ -18,9 +18,25 @@
 			<h4>{{ "Manejo de recursos online" }}</h4>
 			<hr>
 			<div class="row">
-				<div class="col-sm-6">
-					{{ clima | json }}
+				<div class="col-sm-12">
+					lat y Long: &nbsp
+					{{ clima.coord.lat }},
+					{{ clima.coord.lon }}
+					<br>
+					Pais:
+					{{ clima.sys.country }}
+					<br>
+					Amanece:
+					{{ clima.sys.sunrise | date:'HH:mm:ss'}}
+					<br>
+					Anochece:
+					{{ clima.sys.sunset | date:'HH:mm:ss'}}
+					<br>
+					Temperatura:
+					{{ kelvinCelcius(clima.main.temp) }}
+					<br><br>
 				</div>
+				{{ clima | json }}
 			</div>
 		</div>
 	</body>

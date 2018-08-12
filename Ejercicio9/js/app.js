@@ -28,5 +28,13 @@ app.controller('mainCtrl', ['$scope','$http','$sce', function($scope,$http,$sce)
 				          console.warn( error );
 				        })
 
+		$scope.kelvinCelcius = function(k){
+
+			c = k - 273.15;
+			c = Math.round( c*100 ) / 100;
+
+			return c;
+		}
+
 }]);
 })();
