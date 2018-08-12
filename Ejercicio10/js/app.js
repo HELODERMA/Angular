@@ -18,15 +18,9 @@ app.controller('mainCtrl', function($scope, $http) {
 });
 
 
-
-// var app = angular.module('miApp',['ngRoute']);
-// // angular.module('app', ['ngRoute']);
-
-
-// app.controller('mainCtrl', ['$scope','$http', function($scope,$http){
-
-//     $scope.menusuperior = "parciales/menu.html";
-//     $scope.saludo = "Hola a todos";
-
-
-// }]);
+// Filtro personalizado de telefono
+app.filter('telefono', function(){
+	return function(numero){
+		return numero.substring(0,4) + "-" + numero.substring(4);
+	}
+});
