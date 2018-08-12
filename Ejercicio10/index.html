@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="miApp" ng-controller="mainCtrl">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<title>Universidad</title>
+
+		<!-- INCLUIR ESTILOS BOOTSTRAP -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+
+		<!-- ESTILOS DEL ANIMATE -->
+		<link rel="stylesheet" href="css/animate.css">
+
+		<!-- Estilos propios -->
+		<link rel="stylesheet" href="css/main.css">
+
+		<!-- INCLUIR ANGULAR -->
+		<script src="js/lib/angular.min.js"></script>
+		<script src="js/lib/angular-route.min.js"></script>
+
+		<script src="js/app.js"></script>
+		<script src="js/config.js"></script>
+
+		<!-- controladores de pagina -->
+		<script src="js/inicioCtrl.js"></script>
+		<script src="js/profesoresCtrl.js"></script>
+		<script src="js/alumnosCtrl.js"></script>
+
+	</head>
+
+	<body>
+		<div ng-include="menuSuperior"></div>
+
+		<div class="container">
+			<div class="row">
+
+				<div ng-view="ng-view"></div>
+			</div>
+		</div>
+	</body>
+
+</html>
