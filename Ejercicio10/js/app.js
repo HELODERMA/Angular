@@ -1,6 +1,7 @@
 var app = angular.module('miApp', ["ngRoute"]);
-app.controller('mainCtrl', function($scope, $http) {
 
+app.controller('mainCtrl', function($scope, $http) {
+		// Set Up de un NG-INCLUDE
     $scope.menuSuperior = "parciales/menu.html";
 
     $scope.setActive = function(Opcion) {

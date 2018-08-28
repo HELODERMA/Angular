@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html ng-app="miApp" ng-controller="mainCtrl">
+<html ng-app="viajesApp" ng-controller="mainCtrl">
 
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
-		<title>TPD Systems</title>
+		<title>
+			JyDE
+		</title>
 
 		<!-- INCLUIR ESTILOS BOOTSTRAP -->
 		<link rel="stylesheet" href="css/bootstrap.min.css">
@@ -23,21 +25,17 @@
 		<script src="js/config.js"></script>
 
 		<!-- controladores de pagina -->
-		<script src="js/inicioCtrl.js"></script>
-		<script src="js/profesoresCtrl.js"></script>
-		<script src="js/alumnosCtrl.js"></script>
+		<script src="js/poemasCtrl.js"></script>
+		<script src="js/chistesCtrl.js"></script>
+		<script src="js/actividadesCtrl.js"></script>
 
 	</head>
 
 	<body>
-		<!-- Estoy incluyendo el Munu en el Index -->
-		<div ng-include="menuSuperior"></div>
-
+		<div ng-include="menuPrincipal"></div>
 		<div class="container">
 			<div class="row">
-
 				<div ng-view="ng-view"></div>
-
 			</div>
 		</div>
 	</body>
