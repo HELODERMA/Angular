@@ -14,6 +14,14 @@ app.config(function($routeProvider) {
             templateUrl: 'parciales/actividades.html',
 						controller: 'actividadesCtrl'
         })
+        .when('/codigo', {
+            templateUrl: 'parciales/codigo.html',
+						controller: 'codigoCtrl'
+        })
+        .when('/drop', {
+					templateUrl: 'parciales/drop.html',
+						controller: 'dropdownCtrl'
+        })
         .otherwise({
             redirectTo: '/'
         })

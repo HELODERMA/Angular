@@ -1,1 +1,29 @@
-<h1>Nuestros viajes</h1>
+<h1>Viajes echos</h1>
+<hr>
+
+<table class="table table-striped">
+	<tr>
+		<th>Lugar</th>
+		<th>Fecha</th>
+		<th>Memorable</th>
+	</tr>
+	<tr ng-repeat=" actividad in actividadesRealizadas">
+		<td> {{ actividad.lugar }} </td>
+		<td> {{ actividad.fecha }} </td>
+		<td> {{ actividad.mejor }} </td>
+	</tr>
+</table>
+
+<h1>Próximos viajes</h1>
+<hr>
+
+<table class="table table-striped">
+	<tr>
+		<th>Lugar</th>
+		<th>Fecha</th>
+	</tr>
+	<tr ng-repeat="actividad in actividadesFuturas">
+		<td> {{ actividad.lugar }} </td>
+		<td> {{ actividad.fecha }} </td>
+	</tr>
+</table>

@@ -17,6 +17,8 @@ app.controller('mainCtrl', function($scope, $http) {
 			$scope.mPoema = "";
 			$scope.mChiste = "";
 			$scope.mViaje = "";
+			$scope.mCodigo = "";
+			$scope.mDrop = "";
 
 			$scope[opcion] = "active";
 

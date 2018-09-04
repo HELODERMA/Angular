@@ -1,5 +1,5 @@
 app.controller('chistesCtrl', ['$scope', function($scope){
 
-	$scope.setActive('mChiste');
+	$scope.setActive('mDrop');
 
 }]);

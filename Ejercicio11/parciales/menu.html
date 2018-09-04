@@ -5,9 +5,15 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li ng-class="mPoema"><a href="#!/">Poemas</a></li>
-            <li ng-class="mChiste"><a href="#!/chistes">Chistes</a></li>
-            <li ng-class="mViaje"><a href="#!/actividades">Viajes juntos</a></li>
+						<li ng-class="mDrop">
+							<a href="#!/drop" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Del Dia <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li ng-class="mPoema"><a href="#!/">Poema</a></li>
+		            <li ng-class="mChiste"><a href="#!/chistes">Chiste</a></li>
+							</ul>
+						</li>
+						<li ng-class="mCodigo"><a href="#!/codigo">Codigo de Honor</a></li>
+						<li ng-class="mViaje"><a href="#!/actividades">Viajes juntos</a></li>
           </ul>
         </div><!--/.nav-collapse -->
     </div>
