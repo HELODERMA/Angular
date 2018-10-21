@@ -1,8 +1,9 @@
-var app = angular.module('miApp', ["ngRoute"]);
+var app = angular.module('miApp', ['ngRoute','ui.mask']);
 
 app.controller('mainCtrl', function($scope, $http) {
 		// Set Up de un NG-INCLUDE
     $scope.menuSuperior = "parciales/menu.html";
+		$scope.telefonoMask = "9999-9999";
 
     $scope.setActive = function(Opcion) {
 
