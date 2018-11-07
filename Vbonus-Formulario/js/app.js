@@ -5,10 +5,10 @@
 
 		$scope.formData = {};
 
-		$scope.guardar_datos = function( valido ){
-			if (!valido) {
-				return;
-			}
+		$scope.guardar_datos = function(  ){
+			// if (!valido) {
+			// 	return;
+			// }
 			console.log("Posteando");
 		}
 
