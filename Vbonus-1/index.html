@@ -20,14 +20,17 @@
 	<body>
 		<div class="container" ng-controller="listadoCtrl">
 			<h1>Bonus 1</h1>
-			<h4>{{ "Manejando Repeticiones" }}</h4>
+			<h4>{{ borrado }}</h4>
 			<hr>
 
 			<button class="btn btn-primary" ng-click="mostrar_alerta()">
 				<i class="fa fa-search" aria-hidden="true"></i>
 				Buscar</button>
 
-			<button class="btn btn-primary" ng-click="alerta_peticion()">Pedri info</button>
+			<button class="btn btn-warning" ng-click="alerta_confirmacio()">Pedri info</button>
+
+			<button class="btn btn-info" ng-click="alerta_confirmacio()">
+				Input</button>
 
 		</div>
 

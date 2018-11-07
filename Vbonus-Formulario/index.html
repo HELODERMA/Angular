@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html ng-app="bonusApp" ng-controller="mainCtrl">
+	<head>
+		<meta charset="utf-8">
+		<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
+
+		<title>Formularios</title>
+
+		<!-- Incluir Bootstrap -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+		<!-- Incluir AngularJS -->
+		<script src="js/lib/angular.min.js"></script>
+		<script src="js/app.js"></script>
+
+	</head>
+	<body>
+
+		<div class="container">
+
+			<h1>Formularios</h1>
+			<hr>
+
+			<div class="row">
+				<div class="col-md-7">
+
+					<form name="frm" ng-submit="guardar_datos(frm.$valid)" novalidate="novalidate">
+
+						<div class="form-group">
+							<label for="nombre">Nombre</label>
+							<input type="text" id="nombre" class="form-control" name="nobre" ng-model="formData.nombre" required="required">
+						</div>
+
+						<div class="form-group">
+							<label for="edad">Edad</label>
+							<input type="number" id="edad" class="form-control" name="edad" ng-model="formData.edad">
+						</div>
+
+						<div class="form-group">
+							<label for="genero">Genero</label>
+							<select class="form-control" id="genero" name="genero" ng-model="formData.genero">>
+								<option value=""></option>
+								<option value="H">Hombre</option>
+								<option value="M">Mujer</option>
+							</select>
+						</div>
+
+						<div class="form-group">
+							<label for="email">Email</label>
+							<input type="email" id="email" class="form-control" name="email" ng-model="formData.email" required="required">
+						</div>
+
+						<button type="submit" class="btn btn-primary">
+							Guardar</button>
+					</form>
+
+				</div>
+
+				<!-- Bloque de codigo -->
+				<div class="col-md-5">
+					<label>Estructura de datos</label>
+					<pre>{{ frm | json }}</pre>
+				</div>
+
+			</div>
+
+		</div>
+
+	</body>
+</html>
