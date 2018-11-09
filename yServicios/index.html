@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="promesaApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bonus</title>
+    <!-- INCLUIR ESTILOS BOOTSTRAP -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- ESTILOS DEL ANIMATE -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- INCLUIR ANGULAR -->
+    <script src="js/lib/angular.min.js"></script>
+    <!-- MODULOs DE ANGULAR -->
+    <script src="js/app.js"></script>
+    <script src="js/controladores.js"></script>
+    <script src="js/servicios.js"></script>
+</head>
+
+<body ng-controller="personasCtrl">
+    <div class="container">
+        <h1>Servicios</h1>
+        <hr>
+        <pre>{{ personas | json }}</pre>
+    </div>
+</body>
+
+</html>
