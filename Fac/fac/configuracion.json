@@ -1,0 +1,13 @@
+{
+    "version": "1.0.0",
+    "aplicativo": "facturacion",
+    "iniciales": "FAC",
+    "autor": "Josue Sandoval",
+    "anio": "2018",
+    "web": "tpdenterprise.com",
+    "empresa": "tpd",
+    "correo": "sjosue43@gmail.com",
+    "telefono": "(504) 5538905099",
+    "direccion": "avenida springfield",
+    "ISV": 0.12
+}

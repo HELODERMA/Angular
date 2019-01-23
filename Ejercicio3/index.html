@@ -1,72 +1,73 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="tpdApp">
 
-<head>
-  <meta charset="utf-8">
-  <title>Angular</title>
-  <!-- INCLUIR ESTILOS BOOTSTRAP -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <!-- ESTILOS DEL ANIMATE -->
-  <link rel="stylesheet" href="css/animate.css">
-  <!-- INCLUIR ANGULAR -->
-  <script src="js/lib/angular.min.js"></script>
-  <!-- MODULO PRINCIPAL DE ANGULAR -->
-  <script src="js/app.js"></script>
-</head>
+	<head>
+		<meta charset="utf-8">
+		<title>Angular</title>
+		<!-- INCLUIR ESTILOS BOOTSTRAP -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<!-- ESTILOS DEL ANIMATE -->
+		<link rel="stylesheet" href="css/animate.css">
+		<!-- INCLUIR ANGULAR -->
+		<script src="js/lib/angular.min.js"></script>
+		<!-- MODULO PRINCIPAL DE ANGULAR -->
+		<script src="js/app.js"></script>
+	</head>
 
-<body>
-  <div class="container" ng-controller="empresarioCtrl">
-    <h1>Empresario</h1>
-    <h4>{{ empre.nombre }}</h4>
-    <hr>
+	<body>
+		<div class="container" ng-controller="empresarioCtrl">
+			<h1>Empresario</h1>
+			<h4>{{ empre.nombre }}</h4>
+			<hr>
 
-    <div class="row">
+			<div class="row">
 
-      <!-- DIV CON LA IMAGEN DEL EMPRESARIO -->
-      <div class="col-sm-3">
-        <section class="panel">
-          <div class="panel-body" align="center">
-            <img ng-src="{{ empre.foto }}" class="img-circle" alt="" width="150px" height="150px">
-          </div>
-        </section>
-      </div>
+				<!-- DIV CON LA IMAGEN DEL EMPRESARIO -->
+				<div class="col-sm-3">
+					<section class="panel">
+						<div class="panel-body" align="center">
+							<img ng-src="{{ empre.foto }}" class="img-circle" alt="" width="150px" height="150px">
+						</div>
+					</section>
+				</div>
 
-      <!-- DIV DONDE SE MUESTRA LA BIOGRAFIA DEL EMPRESARIO -->
-      <div class="col-sm-9">
-        <section class="panel">
-          <div class="panel-body">
-            {{ empre.bio }}
-            <br><br>
-            <strong>Edad:</strong>{{ empre.edad }} años
-            <br><br>
-            <button type="button" name="button" class="btn btn-primary" ng-click="editarEmpresario()">Editar</button>
-          </div>
-        </section>
-      </div>
-    </div>
-    <div class="row fast fadeIn" ng-show="mostrarCaja">
-      <div class="col-sm-6">
-        <section class="panel">
-          <div class="panel-body">
-            <label>Nombre:</label>
-            <input type="text" class="form-control" ng-model="editando.nombre">
-            <br>
-            <label>Edad:</label>
-            <input type="text" class="form-control" ng-model="editando.edad">
-            <br>
-            <label>Biografia:</label>
-            <textarea name="name" rows="5" class="form-control" ng-model="editando.bio"></textarea>
-            <br>
-            <button class="btn btn-success" ng-click="guardar()">Guardar</button>
-            <button class="btn btn-danger" ng-click="cancelar()">Cancelar</button>
-          </div>
-        </section>
-      </div>
-    </div>
+				<!-- DIV DONDE SE MUESTRA LA BIOGRAFIA DEL EMPRESARIO -->
+				<div class="col-sm-9">
+					<section class="panel">
+						<div class="panel-body">
+							{{ empre.bio }}
+							<br><br>
+							<strong>Edad:</strong>{{ empre.edad }}
+							años
+							<br><br>
+							<button type="button" name="button" class="btn btn-primary" ng-click="editarEmpresario()">Editar</button>
+						</div>
+					</section>
+				</div>
+			</div>
 
+			<div class="row fast fadeIn" ng-show="mostrarCaja">
+				<div class="col-sm-6">
+					<section class="panel">
+						<div class="panel-body">
+							<label>Nombre:</label>
+							<input type="text" class="form-control" ng-model="editando.nombre">
+							<br>
+							<label>Edad:</label>
+							<input type="text" class="form-control" ng-model="editando.edad">
+							<br>
+							<label>Biografia:</label>
+							<textarea name="name" rows="5" class="form-control" ng-model="editando.bio"></textarea>
+							<br>
+							<button class="btn btn-success" ng-click="guardar()">Guardar</button>
+							<button class="btn btn-danger" ng-click="cancelar()">Cancelar</button>
+						</div>
+					</section>
+				</div>
+			</div>
 
-  </div>
+		</div>
 
-</body>
+	</body>
 
 </html>
